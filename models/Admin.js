@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
-const Users = mongoose.model("Users", {
-  token: {
+const Admin = mongoose.model("Admin", {
+  email: {
     type: String,
     default: ""
   },
-  email: {
+  token: {
     type: String,
     default: ""
   },
@@ -19,4 +19,4 @@ const Users = mongoose.model("Users", {
   }
 });
 
-module.exports = Users;
+module.exports = Admin;
