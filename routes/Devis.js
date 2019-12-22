@@ -7,7 +7,10 @@ const mailgun = require("mailgun-js");
 const Devis = require("../models/Devis");
 
 // MailGun setup
-const mg = mailgun({ apiKey: process.env.API_KEY, domain: process.env.DOMAIN });
+const mg = mailgun({
+  apiKey: process.env.MAILGUN_KEY,
+  domain: process.env.DOMAIN
+});
 
 // -------------------------- CREATE --------------------------
 
