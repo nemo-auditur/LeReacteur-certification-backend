@@ -13,7 +13,7 @@ const Devis = mongoose.model("Devis", {
   },
   amountOfProject: {
     estimateAmountOfAcquisition: { type: Number },
-    estimateAmountOfWorkds: { type: Number },
+    estimateAmountOfWorks: { type: Number },
     notaryFees: { type: Number },
     totalBudget: { type: Number }
   }
