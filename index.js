@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 require("./models/Devis");
 
 //loading Routes
-const backofficeRoutes = require("./routes/backoffice");
+const backofficeRoutes = require("./routes/backOffice");
 const Devis = require("./routes/Devis");
 
 //Use routes
