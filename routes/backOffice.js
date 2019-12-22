@@ -15,7 +15,6 @@ router.post("/createAdmin", async (req, res) => {
   const hash = SHA256(req.body.password + salt).toString(encBase64);
 
   try {
-    // MongoDB create new Devis
     const newAdmin = new Admin({
       email: req.body.email,
       token: token,
@@ -31,6 +30,8 @@ router.post("/createAdmin", async (req, res) => {
     res.status(400).json(error.message);
   }
 });
+
+// -------------------------- LOGIN TO THE ADMIN --------------------------
 
 router.post("/login", async (req, res) => {
   console.log("test");
@@ -57,5 +58,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// -------------------- READ ALL --------------------
 module.exports = router;

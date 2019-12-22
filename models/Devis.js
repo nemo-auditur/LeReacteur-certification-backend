@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Devis = mongoose.model("Devis", {
   usersMailAdress: { type: String },
-  emailCheckIn: { type: Boolean },
+  emailCheckIn: { type: String },
   typeOfProperty: { type: String },
   conditionOfProperty: { type: String },
   useOfProperty: { type: String },

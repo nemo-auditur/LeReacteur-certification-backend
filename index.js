@@ -10,6 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+//connect to database
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -21,6 +22,7 @@ require("./models/Devis");
 //loading Routes
 const backofficeRoutes = require("./routes/backoffice");
 const Devis = require("./routes/Devis");
+
 //Use routes
 app.use(backofficeRoutes);
 app.use(Devis);
