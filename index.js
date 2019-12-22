@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+const port_number = server.listen(process.env.PORT || 3000);
+
 //declare app
 const app = express();
 app.use(bodyParser.json());
@@ -37,6 +39,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.listen(8000, () => {
+app.listen(port_number, () => {
   console.log("Server Started");
 });
